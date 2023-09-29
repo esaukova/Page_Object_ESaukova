@@ -81,7 +81,7 @@ class MoneyTransferTest {
         var secondCardBalance = dashboardPage.getCardBalance(secondCardInfo);
         var transferPage = dashboardPage.selectCardToTransfer(secondCardInfo);
         dashboardPage = transferPage.makeValidTransfer(null, firstCardInfo);
-        transferPage.findErrorMessage("Ошибка! Заполните поле перевода");
+        transferPage.findErrorMessage("Ошибка! Заполните поле 'Сумма' для продолжения перевода");
         var expectedBalanceFirstCard = firstCardBalance;
         var expectedBalanceSecondCard = secondCardBalance;
         var actualBalanceFirstCard = dashboardPage.getCardBalance(firstCardInfo);
